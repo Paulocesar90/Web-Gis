@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Gis</title>
+    <link rel="stylesheet" href="https://unpkg.com/ol-layerswitcher@4.1.1/dist/ol-layerswitcher.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/ol@v8.2.0/ol.css"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <div class="grid-container">
+      <div class="header">
+          <img src="assets/Screenshot_from_2024-02-21_19-39-58-removebg-preview (1).png" alt="" style="width: inherit; vertical-align: middle;">
+          <span style="vertical-align: middle;">Demonstração de um projeto Web GIS</span>
+      </div>
+      <div class="left">
+          <div class="toc">
+              <h3>Camadas</h3>
+             
+              <input type="checkbox" id="aeroportos" name="Aeroportos Brasil" checked onchange="toggleLayer(event);">
+              <label for="aeroportos">Aeroportos Brasil</label>
+              <br>
+
+              <input type="checkbox" id="bahia" name="Bahia café 2019" checked onchange="toggleLayer(event);">
+              <label for="bahia">Bahia café 2019</label>
+              <br>
+
+              <input type="checkbox" id="municipios" name="Municipios do Brasil" checked onchange="toggleLayer(event);">
+              <label for="municipios">Municipios do Brasil</label>
+              <br>
+
+              <input type="checkbox" id="osm" name="Mapa-Múndi" checked onchange="toggleLayer(event);">
+              <label for="osm">Mapa-Múndi</label>
+              <br>
+          </div>
+      </div>
+      <div class="right"> 
+          <div id="map"></div>
+      </div>
+  </div>
+  
+    <script src="https://cdn.jsdelivr.net/npm/ol@v8.2.0/dist/ol.js"></script>
+    <script src="https://unpkg.com/ol-layerswitcher@4.1.1"></script>
+    <script src="resources/ol/main.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
